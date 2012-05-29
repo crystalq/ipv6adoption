@@ -1,0 +1,206 @@
+<!--
+   /*
+    Copyright (c) 2009, Trustees of the University of Pennsylvania
+    All rights reserved.
+   
+    Redistribution and use in source and binary forms, with or without 
+    modification, are permitted provided that the following conditions are met:
+   
+     * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation 
+   	 and/or other materials provided with the distribution.
+     * Neither the name of the University of Pennsylvania nor the names of its 
+   	 contributors may be used to endorse or promote products derived from this 
+   	 software without specific prior written permission.
+   
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+    POSSIBILITY OF SUCH DAMAGE.
+   */
+   
+   /*
+    *
+   */
+   
+   -->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>IPV6 Monitoring @ Penn</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <!-- Le styles -->
+      <link href="assets/css/bootstrap.css" rel="stylesheet" />
+      <style type="text/css">
+         body {
+         padding-top: 60px;
+         padding-bottom: 40px;
+         }
+         .sidebar-nav {
+         padding: 9px 0;
+         }
+      </style>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1.1', {packages: ['controls']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Prepare the data
+        var data = google.visualization.arrayToDataTable([
+          ['Name', 'Rank', 'Size of Page', 'Speed'],
+          ['google.com' , 'Top 100', 12, 5],
+          ['upenn.edu', 'Top 1000', 20, 7],
+          ['youtube.com', 'Top 100', 7, 3],
+          ['facebook.com', 'Top 10', 54, 2],
+          ['wordpress.com', 'Top 1000', 22, 6],
+          ['yahoo.com', 'Top 10', 3, 1],
+          ['engadget.com', 'Top 100', 42, 8],
+          ['reddit.com', 'Top 100', 33, 6]
+        ]);
+      
+        // Define a slider control for the Age column.
+        var slider = new google.visualization.ControlWrapper({
+          'controlType': 'NumberRangeFilter',
+          'containerId': 'control1',
+          'options': {
+            'filterColumnLabel': 'Size of Page',
+          'ui': {'labelStacking': 'vertical'}
+          }
+        });
+      
+        // Define a category picker control for the Gender column
+        var categoryPicker = new google.visualization.ControlWrapper({
+          'controlType': 'CategoryFilter',
+          'containerId': 'control2',
+          'options': {
+            'filterColumnLabel': 'Rank',
+            'ui': {
+            'labelStacking': 'vertical',
+              'allowTyping': false,
+              'allowMultiple': false
+            }
+          }
+        });
+      
+        // Define a Pie chart
+        var pie = new google.visualization.ChartWrapper({
+          'chartType': 'PieChart',
+          'containerId': 'chart1',
+          'options': {
+            'width': 300,
+            'height': 300,
+            'legend': 'none',
+            'title': 'IPv6 Optimization',
+            'chartArea': {'left': 15, 'top': 15, 'right': 0, 'bottom': 0},
+            'pieSliceText': 'label'
+          },
+          // Instruct the piechart to use colums 0 (Name) and 3 (Donuts Eaten)
+          // from the 'data' DataTable.
+          'view': {'columns': [0, 3]}
+        });
+      
+        // Define a table
+        var table = new google.visualization.ChartWrapper({
+          'chartType': 'Table',
+          'containerId': 'chart2',
+          'options': {
+            'width': '300px'
+          }
+        });
+      
+        // Create a dashboard
+        new google.visualization.Dashboard(document.getElementById('dashboard')).
+            // Establish bindings, declaring the both the slider and the category
+            // picker will drive both charts.
+            bind([slider, categoryPicker], [pie, table]).
+            // Draw the entire dashboard.
+            draw(data);
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization);
+    </script>
+
+      <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <div class="navbar navbar-fixed-top">
+         <div class="navbar-inner">
+            <div class="container-fluid">
+               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </a>
+               <a class="brand" href="index.html">IPv6 Monitoring @ Penn</a>
+               <!--/.nav-collapse -->
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid">
+         <div class="row-fluid">
+            <div class="span3">
+               <div class="well sidebar-nav">
+                  <ul class="nav nav-list">
+                     <li class="nav-header">Data</li>
+                     <li><a href="fig1.html">Figure 1</a></li>
+                     <li><a href="#">Figure 1.2</a></li>
+                     <li><a href="fig2.html">Figure 2</a></li>
+                     <li><a href="fig3.html">Figure 3</a></li>
+                     <li><a href="fig4.html">Figure 4</a></li>
+                     <li><a href="#">Figure 4.1</a></li>
+                     <li><a href="#">Figure 4.2</a></li>
+                     <li><a href="fig5.html">Figure 5</a></li>
+                     <li><a href="#">Figure 5.1</a></li>
+                     <li><a href="#">Figure 6</a></li>
+                  </ul>
+               </div>
+               <!--/.well -->
+            </div>
+            <!--/span-->
+            <div class="span9">
+               <div id="dashboard">
+      <table>
+        <tr style='vertical-align: top'>
+          <td style='width: 300px; font-size: 0.9em;'>
+            <div id="control1"></div>
+            <div id="control2"></div>
+            <div id="control3"></div>
+          </td>
+          <td style='width: 600px'>
+            <div style="float: left;" id="chart1"></div>
+            <div style="float: left;" id="chart2"></div>
+            <div style="float: left;" id="chart3"></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+            </div>
+         </div>
+         <hr />
+         <footer>
+            <p>&copy; 2012, Trustees of the University of Pennsylvania</p>
+         </footer>
+      </div>
+      <!--/.fluid-container-->
+      <!-- Le javascript
+         ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+       <script src="assets/js/jquery-1.6.4.min.js"></script>
+      <script src="assets/js/bootstrap.js"></script>
+   </body>
+</html>

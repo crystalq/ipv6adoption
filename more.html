@@ -1,0 +1,152 @@
+<!--
+   /*
+    Copyright (c) 2009, Trustees of the University of Pennsylvania
+    All rights reserved.
+   
+    Redistribution and use in source and binary forms, with or without 
+    modification, are permitted provided that the following conditions are met:
+   
+     * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation 
+   	 and/or other materials provided with the distribution.
+     * Neither the name of the University of Pennsylvania nor the names of its 
+   	 contributors may be used to endorse or promote products derived from this 
+   	 software without specific prior written permission.
+   
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+    POSSIBILITY OF SUCH DAMAGE.
+   */
+   
+   /*
+    *
+   */
+   
+   -->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>IPV6 Monitoring @ Penn</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <!-- Le styles -->
+      <link href="assets/css/bootstrap.css" rel="stylesheet" />
+      <style type="text/css">
+         body {
+         padding-top: 60px;
+         padding-bottom: 40px;
+         }
+         .sidebar-nav {
+         padding: 9px 0;
+         }
+      </style>
+      <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <div class="navbar navbar-fixed-top">
+         <div class="navbar-inner">
+            <div class="container-fluid">
+               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </a>
+               <a class="brand" href="index.html">IPv6 Monitoring @ Penn</a>
+               <!--/.nav-collapse -->
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid" />
+      <div class="row-fluid">
+         <div class="span3">
+            <div class="well sidebar-nav">
+               <ul class="nav nav-list">
+                  <li class="nav-header">Data</li>
+                     <li><a href="fig1.html">Figure 1</a></li>
+                     <li><a href="#">Figure 1.2</a></li>
+                     <li><a href="fig2.html">Figure 2</a></li>
+                     <li><a href="fig3.html">Figure 3</a></li>
+                     <li><a href="fig4.html">Figure 4</a></li>
+                     <li><a href="#">Figure 4.1</a></li>
+                     <li><a href="#">Figure 4.2</a></li>
+                     <li><a href="fig5.html">Figure 5</a></li>
+                     <li><a href="#">Figure 5.1</a></li>
+                     <li><a href="#">Figure 6</a></li>
+               </ul>
+            </div>
+            <!--/.well -->
+         </div>
+         <!--/span-->
+         <div class="span9">
+            <h1>IPv6 Monitoring</h1>
+            <p>The data gathered by the monitoring client is displayed in a number of figures as described below.  Additional details are provided in the page associated with each figure.  Figures can be scaled by selecting a corresponding area in the figure, and additional information can be obtained about individual data points by positioning the mouse cursor on top of them.
+            <ul>
+               <li>Fig. 1: Plots the percentage of IPv6 reachable sites among all the sites queried by the monitoring client.</li>
+               <li>Fig. 1.2: Plots the percentage of IPv6 reachable sites among the top 1M sites based on Alexa's ranking.</li>
+               <li>Fig. 2: Identifies among sites that could be reached over both IPv4 and IPv6, how many offer the same, similar, or different content.  The notions of same, similar, and different content are based on page sizes.</li>
+               <li>Fig. 3: Percentage of IPv6 reachable sites by rank.</li>
+               <li>Fig. 4:  Scatter plot of IPv4 vs. IPv6 download times for all reachable sites.</li>
+               <li>Fig. 4.1:  Percentage by rank of sites with a lower content download time over IPv6 than over IPv4.</li>
+               <li>Fig. 4.2: Difference by rank between IPv4 and IPv6 download times.</li>
+               <li>Fig. 5: Scatter plot of normalized (by content size) IPv4 vs. IPv6 download times for all reachable sites.</li>
+               <li>Fig. 5.1:  Average difference between IPv4 and IPv6 download speeds by rank.</li>
+               <li>Fig. 6:  Evolution over time of IPv6 routing table size (number of prefixes).</li>
+            </ul>
+            <div class="row-fluid">
+               <div class="span6">
+                  <h2>Other Vantage Points</h2>
+                  <p> <a href="http://68.87.29.35:8080/monitor/" target="_blank">Comcast NY Site</a>
+                  <p> <a href="http://68.87.29.38:8088/monitor/" target="_blank">Comcast Denver(Old) Site</a>
+                  <p> <a href="http://v6monitor.kangaroo.comcast.net:8180/monitor/" target="_blank">Comcast Philadelphia Site</a>
+                  <p> <a href="http://www.4over6.edu.cn/monitor" target="_blank">Tsinghua University Site</a>
+                  <p> <a href="http://213.46.228.247:8080/monitor/" target="_blank">UPCB Site</a>
+                  <p> <a href="http://131.231.99.8:8080/monitor/" target="_blank">Loughborough University Site</a>
+                  <p> <a href="http://ha.go6.si:8283/monitor/" target="_blank">Go6-Slovenia Site</a>
+               </div>
+               <!--/span-->
+               <div class="span6">
+                  <h2>Related Links</h2>
+                  <ul>
+                     <li><a href="http://en.wikipedia.org/wiki/IPv4_address_exhaustion" target="_blank">IPv4 Exhaustion</a></li>
+                     <li><a href="http://en.wikipedia.org/wiki/IPv6" target="_blank">IPv6</a></li>
+                     <li><a href="http://en.wikipedia.org/wiki/IPv6_deployment" target="_blank">IPv6 Deployment</a></li>
+                     <li><a href="http://www.oecd.org/dataoecd/48/51/44953210.pdf" target="_blank">OECD report  on "Internet Addressing:  Measuring Deployment of IPv6</a></li>
+                     <li><a href="http://labs.ripe.net/content/ipv6-measurement-compilation" target="_blank">RIPE IPv6 measurements compilation</a></li>
+                     <li><a href="http://www.potaroo.net/ispcol/2010-04/ipv6-measure.html" target="_blank">Geoff Huston article</a> and stats on <a href="http://www.potaroo.net/stats/1x1/" target="_blank">end-systems IPv6 abilities and preferences</a> </li>
+                     <li><a href="http://www.mrp.net/IPv6_Survey.html" target="_blank">Mark Prior "IPv6 status survey</a></li>
+                     <li><a href="http://bgp.he.net/ipv6-progress-report.cgi" target="_blank">Mike Leber "Global IPv6 deployment progress Report</a></li>
+                     <li><a href="http://www.ipv6actnow.org/info/statistics/" target="_blank">IPv6 Act Now</a></li>
+                     <li><a href="http://www.sixxs.net/tools/grh/dfp/" target="_blank">SixXS IPv6 prefix visibility</a></li>
+                     <li><a href="http://www.ams-ix.net/statistics/" target="_blank">amsix traffic statistics</a></li>
+                     <li><a href="http://ipv6.he.net/" target="_blank">Hurricane Electric IPv6 service</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!--/row-->
+         <hr />
+         <footer>
+            <p>&copy; 2012, Trustees of the University of Pennsylvania</p>
+         </footer>
+      </div>
+      <!--/.fluid-container-->
+      <!-- Le javascript
+         ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="assets/js/jquery-1.6.4.min.js"></script>
+      <script src="assets/js/bootstrap.js"></script>
+   </body>
+</html>

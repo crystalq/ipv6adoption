@@ -1,0 +1,132 @@
+<!--
+   /*
+    Copyright (c) 2009, Trustees of the University of Pennsylvania
+    All rights reserved.
+   
+    Redistribution and use in source and binary forms, with or without 
+    modification, are permitted provided that the following conditions are met:
+   
+     * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation 
+   	 and/or other materials provided with the distribution.
+     * Neither the name of the University of Pennsylvania nor the names of its 
+   	 contributors may be used to endorse or promote products derived from this 
+   	 software without specific prior written permission.
+   
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+    POSSIBILITY OF SUCH DAMAGE.
+   */
+   
+   /*
+    *
+   */
+   
+   -->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>IPV6 Monitoring @ Penn</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <!-- Le styles -->
+      <link href="assets/css/bootstrap.css" rel="stylesheet" />
+      <style type="text/css">
+         body {
+         padding-top: 60px;
+         padding-bottom: 40px;
+         }
+         .sidebar-nav {
+         padding: 9px 0;
+         }
+      </style>
+
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <div class="navbar navbar-fixed-top">
+         <div class="navbar-inner">
+            <div class="container-fluid">
+               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </a>
+               <a class="brand" href="#">IPv6 Monitoring @ Penn</a>
+               <!--/.nav-collapse -->
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid" />
+      <div class="row-fluid">
+         <div class="span3">
+            <div class="well sidebar-nav">
+               <ul class="nav nav-list">
+                  <li class="nav-header">Data</li>
+                     <li><a href="fig1.html">Figure 1</a></li>
+                     <li><a href="#">Figure 1.2</a></li>
+                     <li><a href="fig2.html">Figure 2</a></li>
+                     <li><a href="fig3.html">Figure 3</a></li>
+                     <li><a href="fig4.html">Figure 4</a></li>
+                     <li><a href="#">Figure 4.1</a></li>
+                     <li><a href="#">Figure 4.2</a></li>
+                     <li><a href="fig5.html">Figure 5</a></li>
+                     <li><a href="#">Figure 5.1</a></li>
+                     <li><a href="#">Figure 6</a></li>
+               </ul>
+            </div>
+            <!--/.well -->
+         </div>
+         <!--/span-->
+         <div class="span9">
+<div id="message"></div>
+            <h1>IPv6 Monitoring</h1>
+            <p>As we rapidly approach the date at which the current set of IPv4 addresses will have been exhausted, i.e., in less than a year according to the latest <a href="http://www.potaroo.net/tools/ipv4" target="_blank">estimates</a>, migrating to IPv6 is becoming increasingly important.  This migration is, however, largely dependent on ensuring that the current IPv4 Internet, and in particular its content, becomes itself accessible over IPv6.  Tracking the extent to which this is happening is the main purpose of this project. 
+            <p>This tracking is performed by a monitoring client that queries the Domain Name System (DNS) for IPv4 and IPv6 addresses (A and quad-A records) for a number of known sites.  The list of sites queried includes the top one million (1M) web sites according to the ranking maintained by <a href="http://s3.amazonaws.com/alexa-static/top-1m.csv.zip" target="_blank">Alexa</a>, and possibly additional sites beyond the top 1M. 
+            <p>Content is deemed IPv6 <i>accessible</i> if DNS returns a quad-A record for the site.  Sites identified as being both IPv4 and IPv6 accessible are then queried for content, and deemed IPv4 and IPv6 <i>reachable</i> if the same content can be retrieved over both.  The relative performance of content retrieval over IPv4 and IPv6 is then compared based on a succession of queries.
+            <p>In order to provide a comprehensive perspective on the level of IPv6 adoption across the Internet, the monitoring software is being deployed at multiple locations, with the goal of ultimately making the information gathered across locations publicly available to facilitate research and evaluation by others.
+            <p><b>Note:</b>  Sites are deemed to offer the <i>same</i> content over IPv4 and IPv6 if they return pages of approximately the same size.</p>
+            <p><a class="btn btn-primary btn-large" href="more.html">Learn more &raquo;</a></p>
+            <div class="row-fluid">
+               <div class="span6">
+                  <h2>History</h2>
+                  <p>The project was initiated as a joint project between the <a href="http://www.upenn.edu" target="_blank">University of Pennsylvania</a> and <a href="http://www.comcast.com" target="_blank">Comcast</a>.  It is partially supported by a grant from Comcast to the University of Pensylvania.  Information about the size of IPV6 routing tables is provided by <a href="http://www.upenn.edu/computing/isc/" target="_blank">Penn's Information Systems & Computing Department</a>.
+                  <p>The sites where the monitoring software is currently deployed include:
+                  <ul>
+                     <li><a href="http://mnlab-ipv6.seas.upenn.edu/monitor/index.html" target="_blank">University of Pennsylvania</a></li>
+                     <li><a href="http://ipv6monitor.comcast.net/" target="_blank">Comcast</a></li>
+                  </ul>
+               </div>
+               <!--/span-->
+               <div class="span6">
+                  <h2>Want to Become Involved?</h2>
+                  <p>If you are interested in becoming involved in this monitoring effort, send an email to <a href="mailto:guerin@ee.upenn.edu" target="_blank">Prof. R. Guerin</a> at the University of Pennsylvania.  The software is made available under an <a href="http://www.openbsd.org/policy.html" target="_blank">Open BSD copyright agreement</a>.  However, there is an implicit understanding that sites which receive a copy of the monitoring software will be willing to make their results available to the common repository maintained by the <a href="http://www.upenn.edu" target="_blank">University of Pennsylvania</a>.  In particular, this implies the agreement not to disable the upload functionality of the client, which is responsible for transferring monitoring results to the Penn repository after each round of measurement.</p>
+               </div>
+            </div>
+         </div>
+         <!--/row-->
+         <hr />
+         <footer>
+            <p>&copy; 2012, Trustees of the University of Pennsylvania</p>
+         </footer>
+      </div>
+      <!--/.fluid-container-->
+      <!-- Le javascript
+         ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="assets/js/jquery-1.6.4.min.js"></script>
+      <script src="assets/js/bootstrap.js"></script>
+   </body>
+</html>
